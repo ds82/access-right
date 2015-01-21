@@ -1,0 +1,19 @@
+{
+  "name": "access.js",
+  "version": "0.0.1",
+  "description": "Littl' lib that checks access to parts of your webapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "access",
+    "rights",
+    "user"
+  ],
+  "author": "Dennis Saenger <npm15@mail.ds82.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}

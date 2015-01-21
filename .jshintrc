@@ -1,0 +1,6 @@
+{
+  "node": true,
+  "predef": [ "module" ],
+  "esnext": true
+}
+
