@@ -32,3 +32,12 @@ She can access `resourceB`, because she has a right that is higher in the hierar
 
 
 `userB` can only access `resourceC`. I think you now know why, right?
+
+# tests
+
+There are some basic unit tests. You can run them yourself like this:
+
+```
+npm install
+npm test
+```
