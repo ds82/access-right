@@ -36,6 +36,31 @@ describe('access.js', function() {
       expect(bool).toBe(true);
     });
 
+    it('should handle null values', function() {
+      var bool = uut.isAllowed();
+      expect(bool).toBe(true);
+    });
+
+    it('should handle empty has and undefined required', function() {
+      var bool = uut.isAllowed([]);
+      expect(bool).toBe(true);
+    });
+
+    it('should handle empty has and something required', function() {
+      var bool = uut.isAllowed([''], 'blah.blubb');
+      expect(bool).toBe(false);
+    });
+
+    it('should handle undef has and something required', function() {
+      var bool = uut.isAllowed(undefined, 'blah.blubb');
+      expect(bool).toBe(false);
+    });
+
+    it('should handle [undef] has and something required', function() {
+      var bool = uut.isAllowed([undefined], 'blah.blubb');
+      expect(bool).toBe(false);
+    });
+
     //
     // TODO
     // uut.isAllowed(['x', 'y'], ['a', ['x','y']])
