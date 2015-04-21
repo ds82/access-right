@@ -4,7 +4,8 @@
   "description": "Littl' lib that checks access to parts of your webapp",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine-node spec/"
+    "test": "jasmine-node spec/",
+    "prepublish": "npm test"
   },
   "keywords": [
     "access",
