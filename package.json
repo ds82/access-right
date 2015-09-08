@@ -1,6 +1,6 @@
 {
   "name": "access.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Littl' lib that checks access to parts of your webapp",
   "main": "index.js",
   "scripts": {
