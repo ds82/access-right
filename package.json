@@ -7,6 +7,10 @@
     "test": "jasmine-node spec/",
     "prepublish": "npm test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ds82/access.js.git"
+  },
   "keywords": [
     "access",
     "rights",
