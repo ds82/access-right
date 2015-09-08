@@ -7,6 +7,10 @@
     "test": "jasmine-node spec/",
     "prepublish": "npm test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ds82/access.js.git"
+  },
   "keywords": [
     "access",
     "rights",
@@ -16,5 +20,8 @@
   "license": "MIT",
   "devDependencies": {
     "jasmine-node": "^1.14.5"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
