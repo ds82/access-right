@@ -27,9 +27,18 @@
     "eslint": "1.7.3",
     "eslint-config-ds82": "2.1.0",
     "eslint-plugin-jasmine": "1.5.0",
+    "ghooks": "0.3.2",
+    "validate-commit-msg": "1.0.0",
     "jasmine": "2.3.2"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+  },
+  "config": {
+    "ghooks": {
+      "commit-msg": "./node_modules/.bin/validate-commit-msg"
+    }
   }
 }
