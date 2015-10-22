@@ -1,5 +1,3 @@
-'use strict';
-
 var uut = require('../');
 
 describe('access.js', function() {
