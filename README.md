@@ -1,14 +1,21 @@
-# access.js
+# access-right
 
-This littl' lib helps me to check if a user has access to something (aka. user-rights). I created this lib to make my life a bit easier when working with user and rights.
+This tiny library helps you to check if a user has access to somethin (e.g. a resource) in your node app.
+I created this lib to make my life a bit easier, when working with user and rights.
 
-Probably this is not useful for anybody else, but how knows?
+Probably this is not useful for anybody else, but who knows?
 
 ## user-rights? ##
 
-If you have an application with users they probably have different access levels oder rights, right? I prefer a hierarchic user-level approach. Every user-right is a string with 0..n 'dots'. Every dot in the string represents a hierarchy level. The more dots, the lower is the right in the hierarchy.
+If you have an application with users they probably have different access levels oder rights.
+I prefer a hierarchic user-level approach. Every user-right is a string with 0..n 'dots'.
+Every dot in the string represents a hierarchy level. The more dots, the lower is the right in the hierarchy
+(similiar to how domain and subdomains and sub-subdomains [...] work).
 
-A user is granted access to a resource, if he has the exact required right or any other higher hierarchy right.
+A user is granted access to a resource if one of these conditions is true:
+
+* the user has exactly the correct access right (required right is equal to provided right)
+* the user has a right that is higher in the hierarchy than the required right
 
 ## WAT? ##
 
@@ -26,16 +33,16 @@ Assume we have the following resources:
 *Who can access what?*
 
 `userA` can access `resourceA` and `resourceB`, but **not** `resourceC`
-`userA` has access to `resourceA`, because she has exactly matching right (`some`) that is required for the resource.
+`userA` has access to `resourceA`, because she has the exactly matching right (`some`) that is required to access the resource.
 She can access `resourceB`, because she has a right that is higher in the hierarchy than the right that is required to access the resource (has: `foo.bar`, required: `foo.bar.wat`)
 `userA` cannot access `resourceC`, because she only has a right that is lower in the hierarchy than the right the resource requires.
 
 
-`userB` can only access `resourceC`. I think you now know why, right?
+`userB` can only access `resourceB` (because the required right `foo.bar.wat` matches exactly one of the provided rights) 
 
 # tests
 
-There are some basic unit tests. You can run them yourself like this:
+There are some basic unit tests. Run them with npm:
 
 ```
 npm install
