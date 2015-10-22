@@ -1,5 +1,3 @@
-'use strict';
-
 var _CONST = {
   'ROOT_RIGHT_SYMBOL': '*'
 };

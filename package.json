@@ -2,7 +2,7 @@
   "name": "access-right",
   "version": "0.0.3",
   "description": "A tiny helper library to handle access rights in your node backend",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "jasmine-node spec/",
     "prepublish": "npm test"
