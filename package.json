@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jasmine",
     "prepublish": "npm test",
-    "lint": "eslint src spec"
+    "lint": "eslint src spec",
+    "build": "npm run lint && npm run test"
   },
   "repository": {
     "type": "git",
