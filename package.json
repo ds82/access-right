@@ -1,7 +1,7 @@
 {
-  "name": "access.js",
+  "name": "access-right",
   "version": "0.0.3",
-  "description": "Littl' lib that checks access to parts of your webapp",
+  "description": "A tiny helper library to handle access rights in your node backend",
   "main": "index.js",
   "scripts": {
     "test": "jasmine-node spec/",
@@ -9,17 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ds82/access.js.git"
+    "url": "https://github.com/ds82/access-right.git"
   },
   "keywords": [
     "access",
-    "rights",
-    "user"
+    "right",
+    "user",
+    "authentication",
+    "node",
+    "backend",
+    "express"
   ],
   "author": "Dennis Saenger <npm15@mail.ds82.de>",
   "license": "MIT",
   "devDependencies": {
-    "jasmine-node": "^1.14.5"
+    "jasmine-node": "1.14.5"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
