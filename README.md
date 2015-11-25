@@ -1,6 +1,6 @@
 # access-right
 
-[![Build Status](https://travis-ci.org/ds82/access-right.svg)](https://travis-ci.org/ds82/access-right)
+[![Build Status](https://img.shields.io/travis/ds82/access-right.svg?style=flat)](https://travis-ci.org/ds82/access-right) [![npm version](https://img.shields.io/npm/v/access-right.svg?style=flat)](https://www.npmjs.com/package/access-right)
 
 This tiny library helps you to check if a user has access to somethin (e.g. a resource) in your node app.
 I created this lib to make my life a bit easier, when working with user and rights.
