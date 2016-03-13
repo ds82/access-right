@@ -29,7 +29,7 @@
     "eslint-config-ds82": "2.1.0",
     "eslint-plugin-jasmine": "1.5.0",
     "ghooks": "0.3.2",
-    "validate-commit-msg": "1.0.0",
+    "validate-commit-msg": "2.4.0",
     "jasmine": "2.3.2",
     "semantic-release": "^4.3.5"
   },
