@@ -30,7 +30,7 @@
     "eslint-plugin-jasmine": "1.5.0",
     "ghooks": "0.3.2",
     "validate-commit-msg": "1.0.0",
-    "jasmine": "2.3.2",
+    "jasmine": "2.5.3",
     "semantic-release": "^4.3.5"
   },
   "publishConfig": {
