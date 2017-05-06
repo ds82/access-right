@@ -31,7 +31,7 @@
     "ghooks": "0.3.2",
     "validate-commit-msg": "1.0.0",
     "jasmine": "2.3.2",
-    "semantic-release": "^4.3.5"
+    "semantic-release": "^6.3.6"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
