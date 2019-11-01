@@ -1,28 +1,28 @@
-sudo: false
 language: node_js
-cache:
-  directories:
-    - node_modules
-notifications:
-  email: false
+
+services:
+  - docker
+
 node_js:
-  - '4'
-  - iojs-v3
-  - iojs-v2
-  - iojs-v1
-  - '0.12'
-  - '0.10'
-before_install:
-  - npm i -g npm@^2.0.0
-before_script:
-  - npm prune
-  - 'curl -Lo travis_after_all.py https://git.io/vLSON'
-after_success:
-  - python travis_after_all.py
-  - export $(cat .to_export_back)
-  - npm run semantic-release
-branches:
-  except:
-    - "/^v\\d+\\.\\d+\\.\\d+$/"
+  - 12
+  - 10
+  - 8
+
+install:
+  - travis_retry npm install
+
 script:
-  - npm run build
+  - npm run test
+
+jobs:
+  include:
+    # Define the release stage that runs semantic-release
+    - stage: release
+      node_js: lts/*
+      # Advanced: optionally overwrite your default `script` step to skip the tests
+      # script: skip
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release
