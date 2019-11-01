@@ -1,5 +1,5 @@
 var _CONST = {
-  'ROOT_RIGHT_SYMBOL': '*'
+  ROOT_RIGHT_SYMBOL: '*'
 };
 
 var mod = {};
@@ -8,7 +8,7 @@ module.exports = mod;
 mod.isAllowed = function(has, requires) {
   has = has || [];
   requires = requires || [];
-  requires = (isArray(requires)) ? requires : [requires];
+  requires = isArray(requires) ? requires : [requires];
 
   return isEmpty(requires) || isRoot(has) || checkOr(has, requires);
 };
@@ -18,8 +18,8 @@ function isArray(maybe) {
 }
 
 function isEmpty(requires) {
-  var isEmptyList = (!requires || requires.length === 0);
-  var hasEmptyEntry = (requires[0] === '' && requires.length === 1);
+  var isEmptyList = !requires || requires.length === 0;
+  var hasEmptyEntry = requires[0] === '' && requires.length === 1;
   return isEmptyList || hasEmptyEntry;
 }
 
@@ -34,7 +34,7 @@ function checkOr(has, requires) {
   has.forEach(function(right) {
     requires.forEach(function(required) {
       right = escapeRegExp(right);
-      var regExp = new RegExp('^' + right + '(\\.[a-zA-Z\\.]*)*$');
+      var regExp = new RegExp('^' + right + '(\\.[a-zA-Z0-9\\.]*)*$');
       found = found || regExp.test(required);
     });
   });

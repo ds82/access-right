@@ -1,14 +1,12 @@
 var uut = require('../');
 
 describe('access.js', function() {
-
   it('should export a `isAllowed` method', function() {
     expect(uut.isAllowed).toBeDefined();
     expect(typeof uut.isAllowed).toEqual('function');
   });
 
   describe('isAllowed()', function() {
-
     it('should return true if required right is empty string', function() {
       var bool = uut.isAllowed(['some'], '');
       expect(bool).toBe(true);
@@ -70,4 +68,15 @@ describe('access.js', function() {
     //
   });
 
+  describe('in production issues/tests', () => {
+    it('test #1: is Allowed should return true', () => {
+      const has = ['filebrowser.local.read'];
+
+      const needs = 'filebrowser.local.read.jobs.a1.job';
+
+      const result = uut.isAllowed(has, needs);
+
+      expect(result).toBe(true);
+    });
+  });
 });
