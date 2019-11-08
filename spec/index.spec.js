@@ -78,5 +78,15 @@ describe('access.js', function() {
 
       expect(result).toBe(true);
     });
+
+    it('test #2: is Allowed should return true', () => {
+      const has = ['filebrowser.local.read'];
+
+      const needs = 'filebrowser.local.read.jetflash_transcend_8gb_1';
+
+      const result = uut.isAllowed(has, needs);
+
+      expect(result).toBe(true);
+    });
   });
 });
