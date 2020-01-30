@@ -32,9 +32,9 @@ function checkOr(has, requires) {
   var found = false;
 
   has.forEach(function(right) {
+    right = escapeRegExp(right);
+    var regExp = new RegExp('^' + right + '(\\.[a-zA-Z0-9_\\.]*)*$');
     requires.forEach(function(required) {
-      right = escapeRegExp(right);
-      var regExp = new RegExp('^' + right + '(\\.[a-zA-Z0-9_\\.]*)*$');
       found = found || regExp.test(required);
     });
   });
