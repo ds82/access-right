@@ -89,6 +89,16 @@ describe('access.js', function() {
       expect(result).toBe(true);
     });
 
+    it('test #2: is Allowed should return true for - in rights', () => {
+      const has = ['filebrowser.local.read'];
+
+      const needs = 'filebrowser.local.read.demo-test';
+
+      const result = uut.isAllowed(has, needs);
+
+      expect(result).toBe(true);
+    });
+
     it('test #3: work with multiple required rights and subrights', () => {
       const has = ['a.b'];
       const needs = ['a.a', 'a.b'];
