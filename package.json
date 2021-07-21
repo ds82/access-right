@@ -42,5 +42,5 @@
       "commit-msg": "./node_modules/.bin/validate-commit-msg"
     }
   },
-  "version": "0.0.0-development"
+  "version": "v2.0.3"
 }
